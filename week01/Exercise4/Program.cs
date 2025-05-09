@@ -17,6 +17,7 @@ class Program
         bool loop = true;
         List<int> numbers = new List<int>();
         int total = 0;
+        int largestNumber = 0;
 
         while(loop){
           int number = int.Parse(Console.ReadLine());
@@ -26,13 +27,15 @@ class Program
           }
           else{
             numbers.Add(number);
+            if(number > largestNumber){
+              largestNumber = number;
+            }
             total += number;
-
           }
         }
         Console.WriteLine($"Total: {total}");
-
-        double average = total / numbers.Count;
+        double average = total / numbers.Count;  
         Console.WriteLine($"Average: {average}");
+        Console.WriteLine($"Largest number: {largestNumber}");
     }
 }
