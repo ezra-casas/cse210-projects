@@ -228,11 +228,10 @@ namespace ScriptureMemorizer
 
     class Program
     {
-        // Exceeded requirements by:
-        // 1. Implementing a scripture library with hardcoded scriptures
-        // 2. Adding random scripture selection from the library
-        // 3. Adding a hint system (type 'hint' to reveal one hidden word)
-        // 4. Ensuring random word selection only picks visible words
+        // Exceeded requirements by implementing the following features beyond the core requirements:
+        // 1. Added a hint system to address memorization challenges: Users can type 'hint' to reveal one randomly selected hidden word, helping them when they struggle to recall specific parts of the scripture.
+        // 2. Implemented a scripture library: A collection of three hardcoded scriptures (John 3:16, Proverbs 3:5-6, Psalm 23:1) is maintained, and a random scripture is selected at the start of the program, enhancing variety and replayability.
+        // 3. Ensured random word selection only picks visible words: The program only hides words that are not already hidden, meeting the stretch goal and making the memorization process more effective and predictable.
         static void Main(string[] args)
         {
             ScriptureLibrary library = new ScriptureLibrary();
